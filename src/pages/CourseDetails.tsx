@@ -133,25 +133,25 @@ export default function CourseDetails() {
                   </p>
                 </div>
 
-                {/* CTA Button */}
-                <a
-                  href="https://wa.me/9779761792180"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full px-6 py-3 bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 text-white rounded-full text-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl text-center block"
-                >
-                  Enroll Now
-                </a>
+          {/* CTA Button */}
+          <a
+            href="https://wa.me/9779761792180"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full px-6 py-3 bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 text-white rounded-full text-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl text-center block"
+          >
+            Enroll Now
+          </a>
 
-                {/* Download Syllabus */}
-                <a
-                  href="https://raw.githubusercontent.com/NCA-Nepal/Static-Assets/refs/heads/main/PDF/NCA%20Ethical%20Hacking%20Bootcamp.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full px-6 py-3 bg-slate-700 hover:bg-slate-600 text-slate-200 rounded-full text-center font-semibold transition-all duration-300 border-2 border-slate-600 hover:border-blue-400"
-                >
-                  Download Syllabus
-                </a>
+          {/* Download Syllabus */}
+          <a
+            href="https://raw.githubusercontent.com/NCA-Nepal/Static-Assets/refs/heads/main/PDF/NCA%20Ethical%20Hacking%20Bootcamp.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full px-6 py-3 bg-slate-700 hover:bg-slate-600 text-slate-200 rounded-full text-center font-semibold transition-all duration-300 border-2 border-slate-600 hover:border-blue-400"
+          >
+            Download Syllabus
+          </a>
               </div>
 
               {/* Quick Stats */}

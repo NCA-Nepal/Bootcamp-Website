@@ -42,7 +42,7 @@ function CoursesCarousel() {
 
   const handleScroll = (direction: 'left' | 'right') => {
     if (!containerRef.current) return;
-    const scrollAmount = 400;
+    const scrollAmount = 420;
     const newPos = direction === 'left' ? scrollPos - scrollAmount : scrollPos + scrollAmount;
     
     containerRef.current.scrollTo({
@@ -85,7 +85,7 @@ function CoursesCarousel() {
             <Link
               key={course.id}
               to={`/course/${course.id}`}
-              className="flex-shrink-0 w-80 group bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-slate-700/50 hover:border-slate-600/50 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 overflow-hidden"
+              className="flex-shrink-0 w-96 group bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-slate-700/50 hover:border-slate-600/50 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 overflow-hidden"
             >
               <div className="relative h-48 overflow-hidden">
                 <img

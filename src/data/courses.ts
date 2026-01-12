@@ -26,17 +26,23 @@ export const courses: Course[] = [
     duration: "24 Weeks",
     cost: "रु4,500",
     description: "Master cybersecurity fundamentals, penetration testing, and ethical hacking techniques with hands-on labs and real-world scenarios.",
-    image: "https://images.unsplash.com/photo-1550355291-bbee04a92027?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1526374965328-7f5ae4e8b59e?auto=format&fit=crop&w=800&q=80",
     icon: Shield,
     color: "from-blue-500 to-blue-600",
     link: "/course/ethical-hacking",
     weekly_breakdown: [
-      { week: 1, title: "Cybersecurity Fundamentals", topics: ["CIA Triad", "Types of Threats", "Security Models", "Network Basics"] },
-      { week: 2, title: "Networking Deep Dive", topics: ["OSI Model", "TCP/IP Protocol", "DNS/DHCP", "Network Tools"] },
-      { week: 3, title: "System Hardening", topics: ["Linux Fundamentals", "File Permissions", "User Management", "Security Best Practices"] },
-      { week: 4, title: "Cryptography", topics: ["Symmetric Encryption", "Asymmetric Encryption", "Hashing", "Digital Signatures"] },
-      { week: 5, title: "Penetration Testing Tools", topics: ["Nmap", "Wireshark", "Metasploit", "Burp Suite"] },
-      { week: 6, title: "Vulnerability Assessment", topics: ["CVSS Scoring", "Scanning Techniques", "Vulnerability Management", "Reporting"] }
+      { week: 1, title: "Module 1: Linux", topics: ["Installing Kali Linux", "Linux Structure", "Linux Terminal", "Basic Commands", "File Permissions", "Process Management"] },
+      { week: 2, title: "Module 2: Networking", topics: ["OSI Model", "TCP/IP Model", "IP Addressing & Subnetting", "Ports & Protocols", "DNS", "VPN & Proxies"] },
+      { week: 3, title: "Module 3: Cryptography Basics", topics: ["Encoding/Decoding", "Symmetric Encryption", "Asymmetric Encryption", "Hashing Algorithms", "Digital Signatures"] },
+      { week: 4, title: "Module 4: Information Security & Penetration Testing", topics: ["Security Domains", "Bug Bounty Programs", "ISO 27001, PCI DSS, HIPAA", "Legal Considerations", "PT Process"] },
+      { week: 5, title: "Module 5: Web Enumeration & Footprinting", topics: ["OSINT & Google Dorking", "Web Fuzzing", "Banner Grabbing", "Whois/Dig", "Subdomain Enumeration"] },
+      { week: 6, title: "Module 6: Web Hacking (Basics)", topics: ["Burpsuite", "SQL Injection", "XSS", "File Inclusion", "Command Injection", "CSRF"] },
+      { week: 7, title: "Module 7: Enumeration & Service Footprinting", topics: ["Nmap Enumeration", "SMB Enumeration", "FTP/NFS/SMTP", "RDP Enumeration"] },
+      { week: 8, title: "Module 8: Web Hacking (Advanced)", topics: ["XXE Attacks", "File Upload Vulnerabilities", "IDOR", "Access Control", "JWT Attacks", "API Attacks"] },
+      { week: 9, title: "Module 9: Vulnerability Research", topics: ["CVE Research", "Exploit Discovery", "Vulnerability Assessment", "Real-world Scenarios"] },
+      { week: 10, title: "Module 10: Vulnerability Assessment Tools", topics: ["Nessus", "OpenVAS", "Scanning Techniques", "Report Generation"] },
+      { week: 11, title: "Module 11: Exploitation & Lateral Movement", topics: ["Reverse Shells", "Metasploit Framework", "Port Forwarding", "File Transfer", "Credential Harvesting"] },
+      { week: 12, title: "Module 12-13: Privilege Escalation & Reporting", topics: ["Windows Privilege Escalation", "Linux Privilege Escalation", "PT Reports", "Bug Bounty Reports"] }
     ]
   },
   {
@@ -44,7 +50,7 @@ export const courses: Course[] = [
     title: "Red Hat System Administration",
     duration: "16 Weeks",
     cost: "रु3,500",
-    description: "Learn enterprise Linux system administration with Red Hat Enterprise Linux, covering configuration, management, and troubleshooting.",
+    description: "Learn enterprise Linux system administration with Red Hat Enterprise Linux, covering configuration, management, and troubleshooting for security professionals.",
     image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=800&q=80",
     icon: Terminal,
     color: "from-red-500 to-red-600",
@@ -60,11 +66,11 @@ export const courses: Course[] = [
   },
   {
     id: 'web-dev-mern',
-    title: "Full Web Development - MERN Stack",
+    title: "Web Development - MERN Stack",
     duration: "12 Weeks",
     cost: "रु2,500",
-    description: "Learn modern web development with HTML, CSS, JavaScript, React, Node.js, Express, and MongoDB from scratch.",
-    image: "https://images.unsplash.com/photo-1633356122544-f134324331cd?auto=format&fit=crop&w=800&q=80",
+    description: "Learn modern secure web development with HTML, CSS, JavaScript, React, Node.js, Express, and MongoDB with security best practices.",
+    image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=800&q=80",
     icon: Code,
     color: "from-emerald-500 to-emerald-600",
     link: "/course/web-dev-mern",
@@ -78,79 +84,11 @@ export const courses: Course[] = [
     ]
   },
   {
-    id: 'osint',
-    title: "OSINT & Digital Investigation",
-    duration: "8 Weeks",
-    cost: "रु1,200",
-    description: "Master Open Source Intelligence gathering techniques, digital investigation methods, and data collection for security professionals.",
-    image: "https://images.unsplash.com/photo-1516321318423-f06f70a504f9?auto=format&fit=crop&w=800&q=80",
-    icon: TrendingUp,
-    color: "from-orange-500 to-orange-600",
-    link: "/course/osint",
-    weekly_breakdown: [
-      { week: 1, title: "OSINT Fundamentals", topics: ["OSINT Methodology", "Data Sources", "Information Gathering", "Legal Considerations"] },
-      { week: 2, title: "Social Media Investigation", topics: ["Profile Analysis", "Content Tracking", "Geolocation", "Account Investigation"] },
-      { week: 3, title: "Domain & Network OSINT", topics: ["WHOIS Lookup", "DNS Records", "IP Investigation", "Network Mapping"] },
-      { week: 4, title: "Advanced Search Techniques", topics: ["Google Dorking", "Shodan", "Censys", "Public Databases"] }
-    ]
-  },
-  {
-    id: 'python-django',
-    title: "Full Web Development - Python Django",
-    duration: "14 Weeks",
-    cost: "रु3,200",
-    description: "Build full-stack web applications using Python, Django framework, and modern frontend technologies.",
-    image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=800&q=80",
-    icon: Brain,
-    color: "from-violet-500 to-violet-600",
-    link: "/course/python-django",
-    weekly_breakdown: [
-      { week: 1, title: "Python Basics", topics: ["Python Fundamentals", "Data Types", "Functions", "OOP Concepts"] },
-      { week: 2, title: "Django Setup & Models", topics: ["Django Installation", "Project Structure", "Models", "ORM"] },
-      { week: 3, title: "Views & Templates", topics: ["Function-Based Views", "Class-Based Views", "Template Engine", "URL Routing"] },
-      { week: 4, title: "Database & Admin Panel", topics: ["Database Migrations", "Django Admin", "Forms", "Authentication"] }
-    ]
-  },
-  {
-    id: 'data-science',
-    title: "Data Science & Analytics",
-    duration: "18 Weeks",
-    cost: "रु4,000",
-    description: "Master data analysis, machine learning, and visualization with Python, Pandas, and industry-standard tools.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
-    icon: TrendingUp,
-    color: "from-cyan-500 to-cyan-600",
-    link: "/course/data-science",
-    weekly_breakdown: [
-      { week: 1, title: "Python for Data Science", topics: ["Pandas", "NumPy", "Matplotlib", "Data Loading"] },
-      { week: 2, title: "Data Cleaning & EDA", topics: ["Missing Data", "Outliers", "Feature Engineering", "Statistical Analysis"] },
-      { week: 3, title: "Machine Learning Basics", topics: ["Supervised Learning", "Regression", "Classification", "Evaluation Metrics"] },
-      { week: 4, title: "Advanced ML & Visualization", topics: ["Ensemble Methods", "Deep Learning Intro", "Tableau", "Business Intelligence"] }
-    ]
-  },
-  {
-    id: 'mobile-dev',
-    title: "Mobile App Development",
-    duration: "12 Weeks",
-    cost: "रु3,500",
-    description: "Create cross-platform mobile apps using React Native and modern mobile development practices.",
-    image: "https://images.unsplash.com/photo-1512941691920-25bab299c0cb?auto=format&fit=crop&w=800&q=80",
-    icon: Code,
-    color: "from-pink-500 to-pink-600",
-    link: "/course/mobile-dev",
-    weekly_breakdown: [
-      { week: 1, title: "Mobile Development Fundamentals", topics: ["React Native Setup", "Components", "Navigation", "Styling"] },
-      { week: 2, title: "State Management & APIs", topics: ["Redux", "Context API", "REST APIs", "Data Fetching"] },
-      { week: 3, title: "Advanced Features", topics: ["Local Storage", "Authentication", "Push Notifications", "Testing"] },
-      { week: 4, title: "Deployment & Publishing", topics: ["App Signing", "App Store Publishing", "Google Play", "Performance"] }
-    ]
-  },
-  {
     id: 'devops',
-    title: "DevOps & Cloud Engineering",
+    title: "DevOps & Cloud Security",
     duration: "16 Weeks",
     cost: "रु4,200",
-    description: "Learn CI/CD, containerization with Docker, Kubernetes, cloud platforms, and infrastructure automation.",
+    description: "Learn CI/CD, containerization with Docker, Kubernetes, cloud platforms, infrastructure automation, and security practices.",
     image: "https://images.unsplash.com/photo-1460925895917-adf4ee868e4e?auto=format&fit=crop&w=800&q=80",
     icon: Terminal,
     color: "from-yellow-500 to-yellow-600",
@@ -159,58 +97,41 @@ export const courses: Course[] = [
       { week: 1, title: "DevOps Fundamentals", topics: ["DevOps Principles", "CI/CD Concepts", "Version Control", "Git Workflow"] },
       { week: 2, title: "Docker & Containerization", topics: ["Docker Basics", "Images & Containers", "Docker Compose", "Registry"] },
       { week: 3, title: "Kubernetes Orchestration", topics: ["K8s Basics", "Pods & Deployments", "Services", "ConfigMaps"] },
-      { week: 4, title: "Cloud Platforms", topics: ["AWS/Azure/GCP", "Infrastructure as Code", "Monitoring", "Security"] }
+      { week: 4, title: "Cloud Security & Infrastructure", topics: ["AWS/Azure/GCP", "Infrastructure as Code", "Monitoring", "Security"] }
     ]
   },
   {
-    id: 'ui-ux',
-    title: "UI/UX Design Bootcamp",
-    duration: "10 Weeks",
-    cost: "रु2,800",
-    description: "Design beautiful and functional user interfaces with modern design principles, Figma, and user experience best practices.",
-    image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=800&q=80",
-    icon: Users,
+    id: 'network-security',
+    title: "Network Security & Firewalls",
+    duration: "14 Weeks",
+    cost: "रु3,800",
+    description: "Master network security concepts, firewall configuration, intrusion detection, and network defense mechanisms for modern enterprises.",
+    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80",
+    icon: Shield,
     color: "from-purple-500 to-purple-600",
-    link: "/course/ui-ux",
+    link: "/course/network-security",
     weekly_breakdown: [
-      { week: 1, title: "Design Fundamentals", topics: ["Color Theory", "Typography", "Layout", "Visual Hierarchy"] },
-      { week: 2, title: "UX Research & Wireframing", topics: ["User Research", "Personas", "Wireframes", "Prototyping"] },
-      { week: 3, title: "Figma & Design Tools", topics: ["Figma Interface", "Component Design", "Design Systems", "Collaboration"] },
-      { week: 4, title: "Interaction & Usability", topics: ["Micro-interactions", "Accessibility", "User Testing", "Design Patterns"] }
+      { week: 1, title: "Network Security Fundamentals", topics: ["Network Architecture", "Security Zones", "DMZ", "Network Segmentation"] },
+      { week: 2, title: "Firewall Technologies", topics: ["Packet Filtering", "Stateful Firewalls", "Application-layer Firewalls", "WAF"] },
+      { week: 3, title: "IDS/IPS Systems", topics: ["Intrusion Detection", "Intrusion Prevention", "Snort", "Suricata"] },
+      { week: 4, title: "VPN & Encryption", topics: ["VPN Technologies", "IPSec", "SSL/TLS", "Tunnel Protocols"] }
     ]
   },
   {
-    id: 'digital-marketing',
-    title: "Digital Marketing Mastery",
-    duration: "8 Weeks",
-    cost: "रु2,200",
-    description: "Comprehensive digital marketing strategies including SEO, social media marketing, content strategy, and analytics.",
-    image: "https://images.unsplash.com/photo-1460925895917-adf4ee868e4e?auto=format&fit=crop&w=800&q=80",
-    icon: Briefcase,
-    color: "from-green-500 to-green-600",
-    link: "/course/digital-marketing",
+    id: 'incident-response',
+    title: "Incident Response & Forensics",
+    duration: "12 Weeks",
+    cost: "रु3,200",
+    description: "Learn digital forensics, incident response procedures, evidence collection, and investigation techniques for cyber incidents.",
+    image: "https://images.unsplash.com/photo-1516321318423-f06f70a504f9?auto=format&fit=crop&w=800&q=80",
+    icon: TrendingUp,
+    color: "from-orange-500 to-orange-600",
+    link: "/course/incident-response",
     weekly_breakdown: [
-      { week: 1, title: "Digital Marketing Fundamentals", topics: ["Marketing Strategy", "Digital Channels", "Analytics Basics", "Goal Setting"] },
-      { week: 2, title: "SEO & SEM", topics: ["Keyword Research", "On-page SEO", "Link Building", "Google Ads"] },
-      { week: 3, title: "Social Media Marketing", topics: ["Platform Strategy", "Content Creation", "Community Management", "Influencer Marketing"] },
-      { week: 4, title: "Analytics & Conversion", topics: ["Google Analytics", "Conversion Optimization", "A/B Testing", "ROI Measurement"] }
-    ]
-  },
-  {
-    id: 'ai-ml',
-    title: "AI & Machine Learning",
-    duration: "20 Weeks",
-    cost: "रु5,500",
-    description: "Deep dive into artificial intelligence, machine learning algorithms, neural networks, and practical ML applications.",
-    image: "https://images.unsplash.com/photo-1677442d019cecf8caf27d6b5d0d9c3d?auto=format&fit=crop&w=800&q=80",
-    icon: Brain,
-    color: "from-red-500 to-red-600",
-    link: "/course/ai-ml",
-    weekly_breakdown: [
-      { week: 1, title: "ML Fundamentals", topics: ["ML Types", "Supervised Learning", "Unsupervised Learning", "Feature Engineering"] },
-      { week: 2, title: "Neural Networks", topics: ["Perceptron", "CNNs", "RNNs", "Transfer Learning"] },
-      { week: 3, title: "Deep Learning & NLP", topics: ["TensorFlow/PyTorch", "Language Models", "Embeddings", "Transformers"] },
-      { week: 4, title: "Production & Ethics", topics: ["Model Deployment", "MLOps", "Bias & Fairness", "Responsible AI"] }
+      { week: 1, title: "Incident Response Planning", topics: ["IR Procedures", "NIST Framework", "Team Structure", "Documentation"] },
+      { week: 2, title: "Forensic Analysis", topics: ["Evidence Collection", "Chain of Custody", "File Systems", "Memory Forensics"] },
+      { week: 3, title: "Malware Analysis", topics: ["Static Analysis", "Dynamic Analysis", "Behavioral Analysis", "Reverse Engineering"] },
+      { week: 4, title: "Investigation & Reporting", topics: ["Timeline Creation", "Report Writing", "Legal Implications", "Lessons Learned"] }
     ]
   }
 ];
