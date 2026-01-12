@@ -22,7 +22,7 @@ function CountdownTimer() {
   return (
     <div className="max-w-2xl mx-auto">
       <div className="relative h-3 bg-slate-700/50 rounded-full mb-6 overflow-hidden shadow-inner">
-        <div 
+        <div
           className="absolute left-0 top-0 h-full bg-gradient-to-r from-blue-500 to-indigo-500 transition-all duration-1000 ease-linear rounded-full shadow-sm"
           style={{ width: `${progress}%` }}
         />
@@ -44,7 +44,7 @@ function CoursesCarousel() {
     if (!containerRef.current) return;
     const scrollAmount = 420;
     const newPos = direction === 'left' ? scrollPos - scrollAmount : scrollPos + scrollAmount;
-    
+
     containerRef.current.scrollTo({
       left: newPos,
       behavior: 'smooth'
@@ -76,17 +76,15 @@ function CoursesCarousel() {
       <div
         ref={containerRef}
         onScroll={handleContainerScroll}
-        className="flex gap-8 overflow-x-auto scroll-smooth pb-4"
+        className="flex gap-8 overflow-x-auto scroll-smooth pb-4 px-12"
         style={{ scrollBehavior: 'smooth', scrollbarWidth: 'none' }}
       >
         {courses.map((course) => {
           const IconComponent = course.icon;
-          return (
-            <Link
-              key={course.id}
-              to={`/course/${course.id}`}
-              className="flex-shrink-0 w-96 group bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-slate-700/50 hover:border-slate-600/50 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 overflow-hidden"
-            >
+          const cardClasses = "flex-shrink-0 w-96 group bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-slate-700/50 hover:border-slate-600/50 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 overflow-hidden block text-left";
+
+          const CardContent = (
+            <>
               <div className="relative h-48 overflow-hidden">
                 <img
                   src={course.image}
@@ -121,11 +119,28 @@ function CoursesCarousel() {
                 </p>
 
                 <div className="flex items-center gap-2 text-blue-400 font-semibold group-hover:gap-3 transition-all">
-                  <span>Learn More</span>
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  <span>{course.link ? "Learn More" : "Coming Soon"}</span>
+                  {course.link && <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />}
                 </div>
               </div>
+            </>
+          );
+
+          return course.link ? (
+            <Link
+              key={course.id}
+              to={course.link}
+              className={cardClasses}
+            >
+              {CardContent}
             </Link>
+          ) : (
+            <div
+              key={course.id}
+              className={cardClasses}
+            >
+              {CardContent}
+            </div>
           );
         })}
       </div>
@@ -168,24 +183,24 @@ function HomePage() {
             </div>
             <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-6">
               <div className="flex gap-6 text-sm md:text-base">
-                <a 
-                  href="https://ncateam.xyz" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
+                <a
+                  href="https://ncateam.xyz"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-slate-300 hover:text-blue-400 transition-colors font-medium"
                 >
                   Main Site
                 </a>
-                <a 
-                  href="https://handbook.ncateam.xyz" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
+                <a
+                  href="https://handbook.ncateam.xyz"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-slate-300 hover:text-blue-400 transition-colors font-medium"
                 >
                   Handbook
                 </a>
               </div>
-              <a 
+              <a
                 href="#contact"
                 className="px-6 py-2.5 bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 text-white rounded-full transition-all duration-300 shadow-lg hover:shadow-xl text-sm md:text-base font-semibold"
               >
@@ -203,29 +218,29 @@ function HomePage() {
             <Rocket className="w-4 h-4" />
             Professional Cybersecurity Training
           </div>
-          
+
           <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white leading-tight">
             Ethical Hacking
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">
               Bootcamp
             </span>
           </h1>
-          
+
           <h2 className="text-xl md:text-2xl text-slate-300 mb-8 font-medium">
             Powered by NCA Team
           </h2>
-          
+
           <p className="text-lg md:text-xl text-slate-300 mb-12 max-w-3xl mx-auto leading-relaxed">
             An intensive 24-week cybersecurity training program designed to transform you into a certified ethical hacker with industry-ready skills.
           </p>
-          
+
           <div className="mb-12">
             <h3 className="text-lg md:text-xl mb-8 text-slate-200 font-semibold">Limited Time Opportunity</h3>
             <CountdownTimer />
           </div>
 
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4 md:gap-6">
-            <a 
+            <a
               href="https://wa.me/9779761792180"
               target="_blank"
               rel="noopener noreferrer"
@@ -233,7 +248,7 @@ function HomePage() {
             >
               ⚡ Secure Your Spot
             </a>
-            <a 
+            <a
               href="https://raw.githubusercontent.com/NCA-Nepal/Static-Assets/refs/heads/main/PDF/NCA%20Ethical%20Hacking%20Bootcamp.pdf"
               target="_blank"
               rel="noopener noreferrer"
@@ -330,7 +345,7 @@ function HomePage() {
               Comprehensive metrics that define our intensive training program
             </p>
           </div>
-          
+
           <div className="grid grid-cols-2 lg:grid-cols-5 gap-6 md:gap-8">
             {[
               { icon: Clock, title: "Duration", value: "8-24 Weeks", color: "from-blue-500 to-blue-600" },
@@ -360,7 +375,7 @@ function HomePage() {
               Take the first step towards becoming a certified ethical hacker. Contact us through any of these channels to apply or learn more about the program.
             </p>
           </div>
-          
+
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
             <a href="mailto:bootcamp@ncateam.xyz" className="group bg-slate-700/50 backdrop-blur-sm p-8 rounded-2xl text-center border border-slate-600/50 hover:border-blue-400/50 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
               <div className="inline-flex p-3 rounded-xl bg-gradient-to-r from-blue-500 to-blue-600 mb-6 group-hover:scale-110 transition-transform duration-300">
@@ -369,7 +384,7 @@ function HomePage() {
               <h3 className="font-bold mb-2 text-white">Email Us</h3>
               <p className="text-slate-300 text-sm">bootcamp@ncateam.xyz</p>
             </a>
-            
+
             <a href="https://discord.gg/KDuvkJHh3D" className="group bg-slate-700/50 backdrop-blur-sm p-8 rounded-2xl text-center border border-slate-600/50 hover:border-indigo-400/50 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
               <div className="inline-flex p-3 rounded-xl bg-gradient-to-r from-indigo-500 to-indigo-600 mb-6 group-hover:scale-110 transition-transform duration-300">
                 <MessageCircle className="w-6 h-6 text-white" />
@@ -377,7 +392,7 @@ function HomePage() {
               <h3 className="font-bold mb-2 text-white">Join Discord</h3>
               <p className="text-slate-300 text-sm">Active Community</p>
             </a>
-            
+
             <a href="tel:+9779761792180" className="group bg-slate-700/50 backdrop-blur-sm p-8 rounded-2xl text-center border border-slate-600/50 hover:border-emerald-400/50 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
               <div className="inline-flex p-3 rounded-xl bg-gradient-to-r from-emerald-500 to-emerald-600 mb-6 group-hover:scale-110 transition-transform duration-300">
                 <Phone className="w-6 h-6 text-white" />
@@ -385,7 +400,7 @@ function HomePage() {
               <h3 className="font-bold mb-2 text-white">Call Us</h3>
               <p className="text-slate-300 text-sm">24/7 Available</p>
             </a>
-            
+
             <a href="https://www.facebook.com/ncateam" className="group bg-slate-700/50 backdrop-blur-sm p-8 rounded-2xl text-center border border-slate-600/50 hover:border-blue-400/50 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
               <div className="inline-flex p-3 rounded-xl bg-gradient-to-r from-blue-600 to-blue-700 mb-6 group-hover:scale-110 transition-transform duration-300 text-2xl">
                 📘

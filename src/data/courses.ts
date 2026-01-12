@@ -9,7 +9,7 @@ export interface Course {
   image: string;
   icon: LucideIcon;
   color: string;
-  link: string;
+  link?: string;
   weekly_breakdown: Week[];
 }
 
@@ -51,10 +51,9 @@ export const courses: Course[] = [
     duration: "16 Weeks",
     cost: "रु3,500",
     description: "Learn enterprise Linux system administration with Red Hat Enterprise Linux, covering configuration, management, and troubleshooting for security professionals.",
-    image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1629904853716-6454b7ad8636?auto=format&fit=crop&w=800&q=80",
     icon: Terminal,
     color: "from-red-500 to-red-600",
-    link: "/course/red-hat-admin",
     weekly_breakdown: [
       { week: 1, title: "RHEL Installation & Configuration", topics: ["System Installation", "Partitioning", "Boot Process", "GRUB Configuration"] },
       { week: 2, title: "File Systems & Storage", topics: ["Filesystem Types", "Mounting", "LVM Basics", "Storage Management"] },
@@ -70,10 +69,9 @@ export const courses: Course[] = [
     duration: "12 Weeks",
     cost: "रु2,500",
     description: "Learn modern secure web development with HTML, CSS, JavaScript, React, Node.js, Express, and MongoDB with security best practices.",
-    image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&w=800&q=80",
     icon: Code,
     color: "from-emerald-500 to-emerald-600",
-    link: "/course/web-dev-mern",
     weekly_breakdown: [
       { week: 1, title: "HTML & CSS Basics", topics: ["HTML Structure", "CSS Styling", "Flexbox", "Grid Layout"] },
       { week: 2, title: "JavaScript Fundamentals", topics: ["Variables & Data Types", "Functions", "ES6 Features", "DOM Manipulation"] },
@@ -89,10 +87,9 @@ export const courses: Course[] = [
     duration: "16 Weeks",
     cost: "रु4,200",
     description: "Learn CI/CD, containerization with Docker, Kubernetes, cloud platforms, infrastructure automation, and security practices.",
-    image: "https://images.unsplash.com/photo-1460925895917-adf4ee868e4e?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1667372393119-c81c0c487b9d?auto=format&fit=crop&w=800&q=80",
     icon: Terminal,
     color: "from-yellow-500 to-yellow-600",
-    link: "/course/devops",
     weekly_breakdown: [
       { week: 1, title: "DevOps Fundamentals", topics: ["DevOps Principles", "CI/CD Concepts", "Version Control", "Git Workflow"] },
       { week: 2, title: "Docker & Containerization", topics: ["Docker Basics", "Images & Containers", "Docker Compose", "Registry"] },
@@ -109,7 +106,6 @@ export const courses: Course[] = [
     image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80",
     icon: Shield,
     color: "from-purple-500 to-purple-600",
-    link: "/course/network-security",
     weekly_breakdown: [
       { week: 1, title: "Network Security Fundamentals", topics: ["Network Architecture", "Security Zones", "DMZ", "Network Segmentation"] },
       { week: 2, title: "Firewall Technologies", topics: ["Packet Filtering", "Stateful Firewalls", "Application-layer Firewalls", "WAF"] },
@@ -126,7 +122,6 @@ export const courses: Course[] = [
     image: "https://images.unsplash.com/photo-1516321318423-f06f70a504f9?auto=format&fit=crop&w=800&q=80",
     icon: TrendingUp,
     color: "from-orange-500 to-orange-600",
-    link: "/course/incident-response",
     weekly_breakdown: [
       { week: 1, title: "Incident Response Planning", topics: ["IR Procedures", "NIST Framework", "Team Structure", "Documentation"] },
       { week: 2, title: "Forensic Analysis", topics: ["Evidence Collection", "Chain of Custody", "File Systems", "Memory Forensics"] },
