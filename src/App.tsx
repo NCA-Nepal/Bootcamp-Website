@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Shield, Terminal, PenTool as Tool, Users, Award, Briefcase, Clock, Users2, FlaskRound as Flask, GraduationCap, Rocket, MessageCircle, Mail, Phone, FileDown, Code, TrendingUp, Brain, ArrowRight } from 'lucide-react';
 
 function CountdownTimer() {
@@ -80,7 +80,7 @@ function App() {
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-16 md:py-24 text-center">
         <div className="max-w-4xl mx-auto">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-400 tebxt-sm font-medium mb-8">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-400 text-sm font-medium mb-8">
             <Rocket className="w-4 h-4" />
             Professional Cybersecurity Training
           </div>
@@ -109,6 +109,7 @@ function App() {
             <a 
               href="https://wa.me/9779761792180"
               target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 text-white rounded-full text-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
             >
               ⚡ Secure Your Spot
@@ -116,6 +117,7 @@ function App() {
             <a 
               href="https://raw.githubusercontent.com/NCA-Nepal/Static-Assets/refs/heads/main/PDF/NCA%20Ethical%20Hacking%20Bootcamp.pdf"
               target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-8 py-4 bg-slate-700 hover:bg-slate-600 text-slate-200 rounded-full text-lg font-semibold transition-all duration-300 border-2 border-slate-600 hover:border-blue-400 shadow-md hover:shadow-lg"
             >
               <FileDown className="w-5 h-5" />
