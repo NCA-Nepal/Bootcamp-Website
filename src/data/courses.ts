@@ -26,7 +26,7 @@ export const courses: Course[] = [
     duration: "24 Weeks",
     cost: "रु4,500",
     description: "Master cybersecurity fundamentals, penetration testing, and ethical hacking techniques with hands-on labs and real-world scenarios.",
-    image: "https://images.unsplash.com/photo-1526374965328-7f5ae4e8b59e?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1504639725590-34d0984388bd?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     icon: Shield,
     color: "from-blue-500 to-blue-600",
     link: "/course/ethical-hacking",
@@ -51,7 +51,7 @@ export const courses: Course[] = [
     duration: "16 Weeks",
     cost: "रु3,500",
     description: "Learn enterprise Linux system administration with Red Hat Enterprise Linux, covering configuration, management, and troubleshooting for security professionals.",
-    image: "https://images.unsplash.com/photo-1629904853716-6454b7ad8636?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1554306274-f23873d9a26c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     icon: Terminal,
     color: "from-red-500 to-red-600",
     weekly_breakdown: [
@@ -87,7 +87,7 @@ export const courses: Course[] = [
     duration: "16 Weeks",
     cost: "रु4,200",
     description: "Learn CI/CD, containerization with Docker, Kubernetes, cloud platforms, infrastructure automation, and security practices.",
-    image: "https://images.unsplash.com/photo-1667372393119-c81c0c487b9d?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1605379399843-5870eea9b74e?q=80&w=1498&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     icon: Terminal,
     color: "from-yellow-500 to-yellow-600",
     weekly_breakdown: [
@@ -119,7 +119,7 @@ export const courses: Course[] = [
     duration: "12 Weeks",
     cost: "रु3,200",
     description: "Learn digital forensics, incident response procedures, evidence collection, and investigation techniques for cyber incidents.",
-    image: "https://images.unsplash.com/photo-1516321318423-f06f70a504f9?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1637073849667-91120a924221?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     icon: TrendingUp,
     color: "from-orange-500 to-orange-600",
     weekly_breakdown: [
