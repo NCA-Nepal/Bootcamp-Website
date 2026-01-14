@@ -119,7 +119,11 @@ export default function CourseDetails() {
                     <DollarSign className="w-5 h-5" />
                     <span className="text-sm font-medium">PRICE</span>
                   </div>
-                  <p className="text-2xl font-bold text-green-400">{course.cost}</p>
+                  {course.cost ? (
+                    <p className="text-2xl font-bold text-green-400">{course.cost}</p>
+                  ) : (
+                    <p className="text-2xl font-bold text-slate-400">Coming Soon</p>
+                  )}
                 </div>
 
                 {/* Topics Count */}
