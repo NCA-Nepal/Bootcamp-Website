@@ -141,7 +141,7 @@ export default function CourseDetails() {
                 <div className="flex flex-col gap-3 pt-4 border-t border-slate-700/50">
                   {/* CTA Button */}
                   <a
-                    href="https://wa.me/9779761792180"
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSdkh4G_SM2uuloPI-If7XpfvE1SbtCxgbntXFMcEzoU0DV0YQ/viewform"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full px-6 py-3 bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 text-white rounded-full text-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl text-center block"

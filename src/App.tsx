@@ -280,21 +280,30 @@ function HomePage() {
 
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4 md:gap-6">
             <a
-              href="https://wa.me/9779761792180"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSdkh4G_SM2uuloPI-If7XpfvE1SbtCxgbntXFMcEzoU0DV0YQ/viewform"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 text-white rounded-full text-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
             >
-              ⚡ Secure Your Spot
+              🔐 Secure Your Spot
             </a>
             <a
-              href="https://raw.githubusercontent.com/NCA-Nepal/Static-Assets/refs/heads/main/PDF/NCA%20Ethical%20Hacking%20Bootcamp.pdf"
+              href="https://wa.me/9779761792180"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-8 py-4 bg-slate-700 hover:bg-slate-600 text-slate-200 rounded-full text-lg font-semibold transition-all duration-300 border-2 border-slate-600 hover:border-blue-400 shadow-md hover:shadow-lg"
             >
               <FileDown className="w-5 h-5" />
-              Download Syllabus
+              Apply Now
+            </a>
+            <a
+              href="https://ctf.ncateam.xyz/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-red-500 to-purple-500 hover:from-red-600 hover:to-purple-600 text-white rounded-full text-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+            >
+              <Terminal className="w-5 h-5" />
+              Practice Hacking!
             </a>
           </div>
         </div>
