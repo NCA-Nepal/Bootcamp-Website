@@ -240,7 +240,9 @@ function HomePage() {
                 </a>
               </div>
               <a
-                href="#contact"
+                href="https://wa.me/9779761792180"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-6 py-2.5 bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 text-white rounded-full transition-all duration-300 shadow-lg hover:shadow-xl text-sm md:text-base font-semibold"
               >
                 Apply Now
@@ -288,16 +290,7 @@ function HomePage() {
               🔐 Secure Your Spot
             </a>
             <a
-              href="https://wa.me/9779761792180"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-slate-700 hover:bg-slate-600 text-slate-200 rounded-full text-lg font-semibold transition-all duration-300 border-2 border-slate-600 hover:border-blue-400 shadow-md hover:shadow-lg"
-            >
-              <FileDown className="w-5 h-5" />
-              Apply Now
-            </a>
-            <a
-              href="https://ctf.ncateam.xyz/"
+              href="https://ctf.ncateam.xyz/games/1/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-red-500 to-purple-500 hover:from-red-600 hover:to-purple-600 text-white rounded-full text-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
