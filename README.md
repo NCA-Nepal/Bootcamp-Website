@@ -1,3 +1,5 @@
-# bootyCamp
+# NCA Ethical Hacking Bootcamp Website
 
-This is also hosted on https://dulcet-eclair-e7559b.netlify.app/
+Source code for NCA Ethical Hacking Bootcamp Website! 
+
+https://bootcamp.ncateam.xyz/
