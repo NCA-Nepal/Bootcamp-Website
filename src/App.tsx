@@ -4,6 +4,41 @@ import { Shield, Terminal, PenTool as Tool, Users, Award, Briefcase, Clock, User
 import CourseDetails from './pages/CourseDetails';
 import { courses } from './data/courses';
 
+// Difficulty Badge Component
+function DifficultyBadge({ difficulty }: { difficulty: 'easy' | 'medium' | 'hard' | 'insane' }) {
+  const difficultyConfig = {
+    easy: {
+      color: 'bg-green-500/20 border-green-500/50 text-green-400',
+      label: 'Easy',
+      symbol: '◆'
+    },
+    medium: {
+      color: 'bg-yellow-500/20 border-yellow-500/50 text-yellow-400',
+      label: 'Medium',
+      symbol: '◆◆'
+    },
+    hard: {
+      color: 'bg-red-500/20 border-red-500/50 text-red-400',
+      label: 'Hard',
+      symbol: '◆◆◆'
+    },
+    insane: {
+      color: 'bg-purple-500/20 border-purple-500/50 text-purple-400',
+      label: 'Insane',
+      symbol: '◆◆◆◆'
+    }
+  };
+
+  const config = difficultyConfig[difficulty];
+
+  return (
+    <div className={`inline-flex items-center gap-2 px-3 py-1 rounded-full border text-xs font-semibold ${config.color}`}>
+      <span className="tracking-wider">{config.symbol}</span>
+      <span>{config.label}</span>
+    </div>
+  );
+}
+
 function CountdownTimer() {
   const [progress, setProgress] = useState(100);
 
@@ -102,6 +137,10 @@ function CoursesCarousel() {
                   <h3 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors line-clamp-2">
                     {course.title}
                   </h3>
+                </div>
+
+                <div className="mb-3">
+                  <DifficultyBadge difficulty={course.difficulty} />
                 </div>
 
                 <div className="flex items-center gap-4 mb-4">

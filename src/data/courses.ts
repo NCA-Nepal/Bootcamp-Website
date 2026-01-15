@@ -10,6 +10,7 @@ export interface Course {
   icon: LucideIcon;
   color: string;
   link?: string;
+  difficulty: 'easy' | 'medium' | 'hard' | 'insane';
   weekly_breakdown: Week[];
 }
 
@@ -22,13 +23,14 @@ export interface Week {
 export const courses: Course[] = [
   {
     id: 'ethical-hacking-beginners',
-    title: "Ethical Hacking Bootcamp - Beginners",
+    title: "Ethical Hacking Bootcamp for Beginners",
     duration: "12 Weeks",
     cost: "रु2,500",
     description: "Master cybersecurity fundamentals with hands-on labs. This intensive 12-week program covers Linux, networking, cryptography basics, and introduction to penetration testing. Perfect for anyone aspiring to start a career in ethical hacking and cybersecurity.",
     image: "https://images.unsplash.com/photo-1504639725590-34d0984388bd?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     icon: Shield,
     color: "from-blue-500 to-blue-600",
+    difficulty: 'easy',
     link: "/course/ethical-hacking-beginners",
     weekly_breakdown: [
       { week: 1, title: "Module 1: Linux - Part 1", topics: ["Introduction", "Installing Kali Linux", "Linux Structure", "Linux Terminal", "Basic Linux Commands"] },
@@ -47,13 +49,14 @@ export const courses: Course[] = [
   },
   {
     id: 'ethical-hacking-advanced',
-    title: "Ethical Hacking Bootcamp - Advanced",
+    title: "Advanced Ethical Hacking",
     duration: "12 Weeks",
     cost: "रु3,000",
-    description: "Advanced penetration testing and exploitation techniques. This 12-week program covers advanced web hacking, vulnerability research, exploitation, lateral movement, privilege escalation, and professional reporting. Only for those who have completed the Beginners bootcamp.",
+    description: "Advanced penetration testing and exploitation techniques. This 12-week program covers advanced web hacking, vulnerability research, exploitation, lateral movement, privilege escalation, and professional reporting. This course is only for those who have completed the Beginners bootcamp.",
     image: "https://cdn.publicsectornetwork.com/insight/feature_images/Untitled_design_5_0757f4.png.1920x1080_q85_autocrop_crop-smart.png",
     icon: Shield,
     color: "from-indigo-500 to-indigo-600",
+    difficulty: 'hard',
     link: "/course/ethical-hacking-advanced",
     weekly_breakdown: [
       { week: 1, title: "Module 7: Enumeration and Service Footprinting - Part 1", topics: ["Using Nmap for Enumeration", "Service Enumeration & Exploitation (SMB, FTP, NFS)"] },
@@ -79,6 +82,7 @@ export const courses: Course[] = [
     image: "https://images.unsplash.com/photo-1554306274-f23873d9a26c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     icon: Terminal,
     color: "from-red-500 to-red-600",
+    difficulty: 'medium',
     weekly_breakdown: [
       { week: 1, title: "RHEL Installation & Configuration", topics: ["System Installation", "Partitioning", "Boot Process", "GRUB Configuration"] },
       { week: 2, title: "File Systems & Storage", topics: ["Filesystem Types", "Mounting", "LVM Basics", "Storage Management"] },
@@ -97,6 +101,7 @@ export const courses: Course[] = [
     image: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&w=800&q=80",
     icon: Code,
     color: "from-emerald-500 to-emerald-600",
+    difficulty: 'easy',
     weekly_breakdown: [
       { week: 1, title: "HTML & CSS Basics", topics: ["HTML Structure", "CSS Styling", "Flexbox", "Grid Layout"] },
       { week: 2, title: "JavaScript Fundamentals", topics: ["Variables & Data Types", "Functions", "ES6 Features", "DOM Manipulation"] },
@@ -115,6 +120,7 @@ export const courses: Course[] = [
     image: "https://images.unsplash.com/photo-1605379399843-5870eea9b74e?q=80&w=1498&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     icon: Terminal,
     color: "from-yellow-500 to-yellow-600",
+    difficulty: 'medium',
     weekly_breakdown: [
       { week: 1, title: "DevOps Fundamentals", topics: ["DevOps Principles", "CI/CD Concepts", "Version Control", "Git Workflow"] },
       { week: 2, title: "Docker & Containerization", topics: ["Docker Basics", "Images & Containers", "Docker Compose", "Registry"] },
@@ -131,6 +137,7 @@ export const courses: Course[] = [
     image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80",
     icon: Shield,
     color: "from-purple-500 to-purple-600",
+    difficulty: 'hard',
     weekly_breakdown: [
       { week: 1, title: "Network Security Fundamentals", topics: ["Network Architecture", "Security Zones", "DMZ", "Network Segmentation"] },
       { week: 2, title: "Firewall Technologies", topics: ["Packet Filtering", "Stateful Firewalls", "Application-layer Firewalls", "WAF"] },
@@ -147,6 +154,7 @@ export const courses: Course[] = [
     image: "https://images.unsplash.com/photo-1637073849667-91120a924221?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     icon: TrendingUp,
     color: "from-orange-500 to-orange-600",
+    difficulty: 'insane',
     weekly_breakdown: [
       { week: 1, title: "Incident Response Planning", topics: ["IR Procedures", "NIST Framework", "Team Structure", "Documentation"] },
       { week: 2, title: "Forensic Analysis", topics: ["Evidence Collection", "Chain of Custody", "File Systems", "Memory Forensics"] },
