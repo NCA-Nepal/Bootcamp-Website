@@ -120,7 +120,19 @@ export default function CourseDetails() {
                     <span className="text-sm font-medium">PRICE</span>
                   </div>
                   {course.cost ? (
-                    <p className="text-2xl font-bold text-green-400">{course.cost}</p>
+                    <div className="flex flex-col gap-1">
+                      <div className="flex items-center gap-3">
+                        <p className="text-2xl font-bold text-green-400">{course.cost}</p>
+                        {course.discountPercentage && (
+                          <span className="px-2 py-1 bg-red-500 text-white text-sm font-bold rounded-full">
+                            {course.discountPercentage}% OFF
+                          </span>
+                        )}
+                      </div>
+                      {course.originalPrice && (
+                        <p className="text-lg text-slate-500 line-through">{course.originalPrice}</p>
+                      )}
+                    </div>
                   ) : (
                     <p className="text-2xl font-bold text-slate-400">Coming Soon</p>
                   )}

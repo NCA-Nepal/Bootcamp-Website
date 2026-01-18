@@ -143,13 +143,32 @@ function CoursesCarousel() {
                   <DifficultyBadge difficulty={course.difficulty} />
                 </div>
 
-                <div className="flex items-center gap-4 mb-4">
+                <div className="flex items-center gap-4 mb-4 min-h-[3rem]">
                   <div className="flex items-center gap-2">
                     <Clock className="w-4 h-4 text-blue-400" />
                     <span className="text-sm font-semibold text-blue-400">{course.duration}</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <span className="text-lg font-bold text-green-400">{course.cost}</span>
+                    {course.cost ? (
+                      <div className="flex flex-col gap-0.5">
+                        <div className="flex items-center gap-2">
+                          <span className="text-lg font-bold text-green-400">{course.cost}</span>
+                          {course.discountPercentage && (
+                            <span className="px-1.5 py-0.5 bg-red-500 text-white text-xs font-bold rounded">
+                              {course.discountPercentage}% OFF
+                            </span>
+                          )}
+                        </div>
+                        {course.originalPrice && (
+                          <span className="text-xs text-slate-500 line-through">{course.originalPrice}</span>
+                        )}
+                      </div>
+                    ) : (
+                      <div className="flex flex-col gap-0.5">
+                        <span className="text-lg font-bold text-slate-400">Coming Soon</span>
+                        <div className="h-3"></div>
+                      </div>
+                    )}
                   </div>
                 </div>
 

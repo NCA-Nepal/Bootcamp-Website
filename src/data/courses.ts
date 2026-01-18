@@ -5,6 +5,8 @@ export interface Course {
   title: string;
   duration: string;
   cost: string;
+  originalPrice?: string;
+  discountPercentage?: number;
   description: string;
   image: string;
   icon: LucideIcon;
@@ -23,9 +25,11 @@ export interface Week {
 export const courses: Course[] = [
   {
     id: 'ethical-hacking-beginners',
-    title: "Ethical Hacking Bootcamp for Beginners",
+    title: "Beginners Ethical Hacking Bootcamp",
     duration: "12 Weeks",
     cost: "रु2,500",
+    originalPrice: "रु5,000",
+    discountPercentage: 50,
     description: "Master cybersecurity fundamentals with hands-on labs. This intensive 12-week program covers Linux, networking, cryptography basics, and introduction to penetration testing. Perfect for anyone aspiring to start a career in ethical hacking and cybersecurity.",
     image: "https://images.unsplash.com/photo-1504639725590-34d0984388bd?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     icon: Shield,
@@ -52,6 +56,8 @@ export const courses: Course[] = [
     title: "Advanced Ethical Hacking",
     duration: "12 Weeks",
     cost: "रु3,000",
+    originalPrice: "रु6,000",
+    discountPercentage: 50,
     description: "Advanced penetration testing and exploitation techniques. This 12-week program covers advanced web hacking, vulnerability research, exploitation, lateral movement, privilege escalation, and professional reporting. This course is only for those who have completed the Beginners bootcamp.",
     image: "https://cdn.publicsectornetwork.com/insight/feature_images/Untitled_design_5_0757f4.png.1920x1080_q85_autocrop_crop-smart.png",
     icon: Shield,
