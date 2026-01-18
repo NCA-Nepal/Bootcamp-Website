@@ -53,7 +53,7 @@ export const courses: Course[] = [
   },
   {
     id: 'ethical-hacking-advanced',
-    title: "Advanced Ethical Hacking",
+    title: "Advanced Ethical Hacking Bootcamp",
     duration: "12 Weeks",
     cost: "रु3,000",
     originalPrice: "रु6,000",
