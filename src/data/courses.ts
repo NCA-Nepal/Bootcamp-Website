@@ -1,4 +1,4 @@
-import { LucideIcon, Shield, Terminal, Code, TrendingUp } from 'lucide-react';
+import { LucideIcon, Shield, Terminal, Code, TrendingUp, Skull } from 'lucide-react';
 
 export interface Course {
   id: string;
@@ -13,6 +13,8 @@ export interface Course {
   color: string;
   link?: string;
   difficulty: 'easy' | 'medium' | 'hard' | 'insane';
+  enrollmentLink?: string;
+  syllabusLink?: string;
   weekly_breakdown: Week[];
 }
 
@@ -27,7 +29,7 @@ export const courses: Course[] = [
     id: 'ethical-hacking-beginners',
     title: "Beginners Ethical Hacking Bootcamp",
     duration: "12 Weeks",
-    cost: "रु2,500",
+    cost: "रु2,499",
     originalPrice: "रु5,000",
     discountPercentage: 50,
     description: "Master cybersecurity fundamentals with hands-on labs. This intensive 12-week program covers Linux, networking, cryptography basics, and introduction to penetration testing. Perfect for anyone aspiring to start a career in ethical hacking and cybersecurity.",
@@ -55,7 +57,7 @@ export const courses: Course[] = [
     id: 'ethical-hacking-advanced',
     title: "Advanced Ethical Hacking Bootcamp",
     duration: "12 Weeks",
-    cost: "रु3,000",
+    cost: "रु2,999",
     originalPrice: "रु6,000",
     discountPercentage: 50,
     description: "Advanced penetration testing and exploitation techniques. This 12-week program covers advanced web hacking, vulnerability research, exploitation, lateral movement, privilege escalation, and professional reporting. This course is only for those who have completed the Beginners bootcamp.",
@@ -80,22 +82,38 @@ export const courses: Course[] = [
     ]
   },
   {
-    id: 'red-hat-admin',
-    title: "Red Hat System Administration",
-    duration: "16 Weeks",
-    cost: "",
-    description: "Learn enterprise Linux system administration with Red Hat Enterprise Linux, covering configuration, management, and troubleshooting for security professionals.",
-    image: "https://images.unsplash.com/photo-1554306274-f23873d9a26c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    id: 'python-for-hackers',
+    title: "Python for Hackers",
+    duration: "17 Weeks",
+    cost: "रु2,499",
+    originalPrice: "रु5,000",
+    discountPercentage: 50,
+    description: "Master Python programming with an attacker's mindset. This comprehensive 17-week course covers Python fundamentals through advanced automation and scripting techniques essential for ethical hacking, penetration testing, and security research. Learn to build your own security tools and automate offensive tasks.",
+    image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     icon: Terminal,
     color: "from-red-500 to-red-600",
     difficulty: 'medium',
+    link: "/course/python-for-hackers",
+    enrollmentLink: "",
+    syllabusLink: "https://raw.githubusercontent.com/NCA-Nepal/Static-Assets/refs/heads/main/PDF/Python%20for%20Hackers%20Syllabus.pdf",
     weekly_breakdown: [
-      { week: 1, title: "RHEL Installation & Configuration", topics: ["System Installation", "Partitioning", "Boot Process", "GRUB Configuration"] },
-      { week: 2, title: "File Systems & Storage", topics: ["Filesystem Types", "Mounting", "LVM Basics", "Storage Management"] },
-      { week: 3, title: "User & Group Management", topics: ["User Creation", "Group Management", "Permissions", "Sudo Configuration"] },
-      { week: 4, title: "Package Management", topics: ["RPM Basics", "Yum/DNF", "Package Installation", "Dependency Resolution"] },
-      { week: 5, title: "Process & Services Management", topics: ["Systemd", "Service Management", "Process Monitoring", "Scheduling"] },
-      { week: 6, title: "Network Configuration", topics: ["Network Interfaces", "DNS/DHCP", "Firewall Rules", "SSH Configuration"] }
+      { week: 1, title: "Introduction to Python", topics: ["What is Python?", "Why Python is popular", "Python use cases (Web, Automation, Security, Data, AI)", "Installing Python (Windows / Linux / macOS)", "Python versions & virtual environments", "Running Python scripts", "Python REPL"] },
+      { week: 2, title: "Python Basics", topics: ["Python syntax & indentation", "Comments", "Keywords & identifiers", "Variables & assignment", "Dynamic typing", "Input & output (input(), print())"] },
+      { week: 3, title: "Data Types & Type Handling", topics: ["Numeric types (int, float, complex)", "Boolean (bool)", "Strings", "NoneType", "Type conversion (casting)", "type() and isinstance()"] },
+      { week: 4, title: "Operators", topics: ["Arithmetic operators", "Comparison operators", "Logical operators", "Assignment operators", "Bitwise operators", "Operator precedence"] },
+      { week: 5, title: "Control Flow", topics: ["Conditional Statements (if, elif, else)", "Nested conditions", "Ternary expressions", "for loop", "while loop", "break, continue, pass", "Loop else"] },
+      { week: 6, title: "Strings (Deep Dive)", topics: ["Indexing & slicing", "String methods", "String formatting (f-strings, format())", "Escape characters", "Multiline strings", "String immutability"] },
+      { week: 7, title: "Python Collections - Lists & Tuples", topics: ["Creating lists", "Indexing & slicing", "List methods", "List comprehension", "Nested lists", "Tuple basics", "Packing & unpacking", "Tuple vs list"] },
+      { week: 8, title: "Python Collections - Sets & Dictionaries", topics: ["Set creation", "Set methods", "Union, intersection, difference", "Key-value pairs", "Dictionary methods", "Iterating dictionaries", "Nested dictionaries", "Dictionary comprehension"] },
+      { week: 9, title: "Functions", topics: ["Defining functions", "Parameters & arguments", "Default & keyword arguments", "*args and **kwargs", "Return values", "Docstrings", "Lambda functions"] },
+      { week: 10, title: "Modules & Packages", topics: ["Importing modules", "Built-in modules", "Creating custom modules", "Python packages", "__name__ == '__main__'"] },
+      { week: 11, title: "File Handling & Error Handling", topics: ["Reading files", "Writing files", "File modes", "Working with text & binary files", "Context managers (with)", "CSV & JSON basics", "Syntax vs runtime errors", "try, except, else, finally", "Custom exceptions", "Debugging techniques", "Logging basics"] },
+      { week: 12, title: "Object-Oriented Programming (OOP)", topics: ["What is OOP?", "Classes & objects", "__init__ constructor", "Instance variables & methods", "Encapsulation", "Abstraction", "Inheritance", "Polymorphism", "Class variables", "Static methods & class methods", "Magic methods (__str__, __repr__, __len__)", "Composition vs inheritance"] },
+      { week: 13, title: "Python Standard Library (Intermediate)", topics: ["os & sys", "datetime", "math & random", "re (regular expressions)", "argparse", "subprocess"] },
+      { week: 14, title: "Virtual Environments & Dependency Management", topics: ["venv", "pip", "requirements.txt", "Version pinning", "Basic project structure"] },
+      { week: 15, title: "HTTP & Automation", topics: ["Understanding HTTP basics", "Using requests", "GET & POST requests", "Headers, cookies & sessions", "Handling JSON APIs", "Authentication (tokens, basic auth)", "Error handling in HTTP requests"] },
+      { week: 16, title: "Automation & Scripting", topics: ["Automating file operations", "Web scraping basics (requests, BeautifulSoup)", "Automating form submissions", "Scheduled scripts (cron / task scheduler)", "CLI tools using Python", "Writing reusable automation scripts"] },
+      { week: 17, title: "Capstone Projects", topics: ["Number guessing game", "Simple calculator", "To-do list (CLI)", "Password strength checker", "File organizer automation", "Contact management system (OOP-based)", "Log file analyzer", "CLI-based quiz application", "API data fetcher using requests", "Website uptime monitoring script", "Automated login & form submission", "Web scraper with data export (CSV/JSON)", "REST API client with authentication", "Final Capstone: Automation tool / Mini REST API client / Object-oriented task manager / Web data aggregation & reporting tool"] }
     ]
   },
   {
@@ -167,5 +185,5 @@ export const courses: Course[] = [
       { week: 3, title: "Malware Analysis", topics: ["Static Analysis", "Dynamic Analysis", "Behavioral Analysis", "Reverse Engineering"] },
       { week: 4, title: "Investigation & Reporting", topics: ["Timeline Creation", "Report Writing", "Legal Implications", "Lessons Learned"] }
     ]
-  }
+  },
 ];
